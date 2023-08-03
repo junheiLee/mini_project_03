@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import com.team08.dao.ProductDAO;
 import com.team08.dto.ProductVO;
 
-public class ProductService {
+public class ItemService {
 
-	private static ProductService instance = new ProductService();
+	private static ItemService instance = new ItemService();
 	private ProductDAO dao;
 	
-	private ProductService() {
+	private ItemService() {
 		this.dao = ProductDAO.getInstance();
 	}
 	
-	public static ProductService getInstance() {
+	public static ItemService getInstance() {
 		return instance;
 	}
 	
