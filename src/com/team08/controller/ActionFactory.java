@@ -20,10 +20,6 @@ public class ActionFactory {
 		/* 추가된 부분 */
 		if (command.equals("index")) {
 			action = new IndexAction();
-		} else if (command.equals("product_detail")) {
-			action = new ProductDetailAction();
-		} else if (command.equals("catagory")) {
-			action = new ProductKindAction();
 		} else if (command.equals("contract")) {
 			action = new ContractAction();
 		} else if (command.equals("join_form")) {
