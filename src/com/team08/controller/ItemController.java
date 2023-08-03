@@ -3,14 +3,13 @@ package com.team08.controller;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.team08.service.ProductService;
+import com.team08.service.ItemService;
 
 /**
  * 상품 상세페이지 및 목록 처리 컨트롤러
@@ -21,9 +20,9 @@ import com.team08.service.ProductService;
  * @author junheiLee
  */
 @WebServlet("/items")
-public class ProductController extends HttpServlet {
+public class ItemController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final ProductService service = ProductService.getInstance();
+	private static final ItemService service = ItemService.getInstance();
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

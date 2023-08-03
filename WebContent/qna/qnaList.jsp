@@ -14,7 +14,7 @@
       <c:forEach items="${qnaList}"  var="qnaVO">
       <tr>  
         <td> ${qnaVO.qseq} </td>    
-        <td> <a href="NonageServlet?command=qna_view&qseq=${qnaVO.qseq}"> ${qnaVO.subject} </td>      
+        <td> <a href="qnas?command=view&qseq=${qnaVO.qseq}"> ${qnaVO.subject} </td>      
         <td> <fmt:formatDate value="${qnaVO.indate}" type="date"/></td>
         <td> 
           <c:choose>
@@ -28,7 +28,7 @@
       <div class="clear"></div>
       <div id="buttons" style="float:right">
       <input type="button"  value="1:1 질문하기"  class="submit"    
-onclick="location.href='NonageServlet?command=qna_write_form'"> 
+onclick="location.href='qnas?command=writeForm'"> 
       <input type="button"    value="쇼핑 계속하기"  class="cancel"  
 onclick="location.href='NonageServlet?command=index'">  
       </div>
