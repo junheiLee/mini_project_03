@@ -24,7 +24,7 @@ import com.team08.service.QnaService;
  * qna 목록 보기 요청을 받으면 doGet 메서드를 통해 doHandle에서 요청 처리,
  * qna 작성 요청을 받으면 doPost 메서드를 실행하여 qna 저장을 진행한 후 qna list로 돌아간다.
  */
-@WebServlet("/qnas")
+@WebServlet("/qnas/*")
 public class QnaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final QnaService service = QnaService.getInstance();
@@ -38,12 +38,12 @@ public class QnaController extends HttpServlet {
 	// write
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String url = "qnas?command=list";		
+		String url = request.getContextPath() + "/qnas/list";		
 		HttpSession session = request.getSession();
 		MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
 
 		if(loginUser == null) {
-			url = "NonageServlet?command=login_form";
+			url = "/NonageServlet?command=login_form";
 		} else {
 			QnaVO qnaVO = new QnaVO();
 			qnaVO.setSubject(request.getParameter("subject"));
@@ -57,33 +57,34 @@ public class QnaController extends HttpServlet {
 	private void doHandle(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException{
 		String url = "";
-		
-		String command = request.getParameter("command");
+		String path = request.getPathInfo();
 		HttpSession session = request.getSession();
 		MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
 		
 		if(loginUser == null) {
-			url = "NonageServlet?command=login_form";
+			url = "/NonageServlet?command=login_form";
 		} else {
 			
-			if(command.equals("list")) {
-				url = "qna/qnaList.jsp";
+			if(path.equals("/list")) {
+				url = "/qna/qnaList.jsp";
 				ArrayList<QnaVO> qnaList = service.listQna(loginUser.getId());
 				request.setAttribute("qnaList", qnaList);
-		
-			}else if(command.equals("view")) {
-				url = "qna/qnaView.jsp";
+				
+			}else if(path.equals("/view")) {
+				url = "/qna/qnaView.jsp";
 				int qseq = Integer.parseInt(request.getParameter("qseq"));
 				QnaVO qnaVO = service.getQna(qseq);
 				request.setAttribute("qnaVO", qnaVO);
 				
-			}else if(command.equals("writeForm")) {
-				url = "qna/qnaWrite.jsp";	
+			}else if(path.equals("/writeForm")) {
+				url = "/qna/qnaWrite.jsp";
+				
+			}else {
+				url = "/NonageServlet?command=login_form";
 			}
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-		dispatcher.forward(request, response);
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
 }

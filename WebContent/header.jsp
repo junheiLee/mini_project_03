@@ -7,9 +7,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Nonage Shop</title>
-<link href="css/shopping.css" rel="stylesheet">
-<script type="text/javascript" src="member/member.js"></script>
-<script type="text/javascript" src="mypage/mypage.js"></script>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+<link href="${contextPath}/css/shopping.css" rel="stylesheet">
+<script type="text/javascript" src="${contextPath}/member/member.js"></script>
+<script type="text/javascript" src="${contextPath}/mypage/mypage.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
 			<!--로고 들어가는 곳 시작--->
 			<div id="logo">
 				<a href="NonageServlet?command=index"> <img
-					src="images/logo.gif" width="180" height="100" alt="nonageshop">
+					src="${contextPath}/images/logo.gif" width="180" height="100" alt="nonageshop">
 				</a>
 			</div>
 			<!--로고 들어가는 곳 끝-->
@@ -45,7 +47,7 @@
 					<li>/</li>
 					<li><a href="NonageServlet?command=mypage">MY PAGE</a></li>
 					<li>/</li>
-					<li><a href="qnas?command=list">Q&amp;A(1:1)</a>
+					<li><a href="${contextPath}/qnas/list">Q&amp;A(1:1)</a>
 					</li>
 				</ul>
 			</nav>

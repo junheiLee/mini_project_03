@@ -52,14 +52,6 @@ public class ActionFactory {
 			action = new OrderDetailAction();
 		} else if (command.equals("order_all")) {
 			action = new OrderAllAction();
-		} else if (command.equals("qna_list")) {
-			action = new QnaListAction();
-		} else if (command.equals("qna_write_form")) {
-			action = new QnaWriteFormAction();
-		} else if (command.equals("qna_write")) {
-			action = new QnaWriteAction();
-		} else if (command.equals("qna_view")) {
-			action = new QnaViewAction();
 		}
 
 		// admin
