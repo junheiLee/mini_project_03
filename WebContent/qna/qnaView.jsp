@@ -28,7 +28,7 @@
     <div class="clear"></div>
      <div id="buttons" style="float:right">
       <input type="button"  value="목록보기"     class="submit"  onclick="location.href='${contextPath}/qnas/list'"> 
-      <input type="button"  value="쇼핑 계속하기"  class="cancel"  onclick="location.href='NonageServlet?command=index'">  
+      <input type="button"  value="쇼핑 계속하기"  class="cancel"  onclick="location.href='${contextPath}/NonageServlet?command=index'">  
       </div>
     </form>
   </article>

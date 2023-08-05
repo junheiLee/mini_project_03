@@ -30,7 +30,7 @@
       <input type="button"  value="1:1 질문하기"  class="submit"    
 onclick="location.href='${contextPath}/qnas/writeForm'"> 
       <input type="button"    value="쇼핑 계속하기"  class="cancel"  
-onclick="location.href='NonageServlet?command=index'">  
+onclick="location.href='${contextPath}/NonageServlet?command=index'">  
       </div>
     </form>
   </article>

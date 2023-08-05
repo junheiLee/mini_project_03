@@ -19,7 +19,7 @@
 		 <div id="buttons" style="float:right">
 			<input type="submit"  value="글쓰기"     class="submit"> 
 			<input type="reset"   value="취소"     class="cancel">
-			<input type="button"  value="쇼핑 계속하기"  class="submit"  onclick="location.href='NonageServlet?command=index'">	
+			<input type="button"  value="쇼핑 계속하기"  class="submit"  onclick="location.href='${contextPath}/NonageServlet?command=index'">	
 		  </div>
 		</form>
 	</article>
