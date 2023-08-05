@@ -20,5 +20,28 @@ public class AdminItemController extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
+	
+	private void list() {
+		
+	}
+	
+	private void writeForm() {
+		
+	}
+	
+	private void write() {
+		
+	}
+	
+	private void detail() {
+		
+	}
+	
+	private void updateForm() {
+		
+	}
+	
+	private void update() {
+		
+	}
 }

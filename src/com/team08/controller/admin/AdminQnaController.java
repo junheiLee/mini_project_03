@@ -21,4 +21,15 @@ public class AdminQnaController extends HttpServlet {
 		doGet(request, response);
 	}
 
+	private void list() {
+		
+	}
+	
+	private void detail() {
+		
+	}
+	
+	private void repsave() {
+		
+	}
 }

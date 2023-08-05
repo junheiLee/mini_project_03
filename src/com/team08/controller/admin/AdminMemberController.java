@@ -20,5 +20,9 @@ public class AdminMemberController extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+	private void list() {
+		
+	}
 
 }

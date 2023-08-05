@@ -21,4 +21,11 @@ public class AdminOrderController extends HttpServlet {
 		doGet(request, response);
 	}
 
+	private void list() {
+		
+	}
+	
+	private void save() {
+		
+	}
 }

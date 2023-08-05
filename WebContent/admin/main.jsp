@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 <html>
 <head>
 <meta charset="UTF-8">
@@ -35,7 +37,7 @@
 		<article>
 			<div id="loginform">
 				<form name="frm" method="post"
-					action="${contextPath}/NonageServlet?command=admin_login">
+					action="${contextPath}/admin/account/login">
 					<table>
 						<tr>
 							<td>아 이 디</td>
