@@ -7,12 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>freeflux Admin</title>
-<link rel="stylesheet" href="${contextPath}/admin/css/admin.css">
-<script type="text/javascript" src="${contextPath}/admin/product/product.js"></script>
+<link rel="stylesheet" href="admin/css/admin.css">
+<script type="text/javascript" src="admin/product/product.js"></script>
 <c:choose>
 	<c:when test="${empty workerId}">
 		<script type="text/javascript">
-			location.href = '${contextPath}/NonageServlet?command=admin_login_form';
+			location.href = 'NonageServlet?command=admin_login_form';
 		</script>
 	</c:when>
 </c:choose>
@@ -21,12 +21,12 @@
 	<div id="wrap">
 		<header>
 			<div id="logo">
-				<a href="${contextPath}/NonageServlet?command=admin_login_form"> <img
-					style="width: 800px" src="${contextPath}/admin/images/bar_01.gif"> <img
-					src="${contextPath}/admin/images/text.gif">
+				<a href="NonageServlet?command=admin_login_form"> <img
+					style="width: 800px" src="admin/images/bar_01.gif"> <img
+					src="admin/images/text.gif">
 				</a>
 			</div>
 			<input class="btn" type="button" value="logout" style="float: right;"
-				onClick="location.href='${contextPath}/NonageServlet?command=admin_logout'">
+				onClick="location.href='NonageServlet?command=admin_logout'">
 		</header>
 		<div class="clear"></div>

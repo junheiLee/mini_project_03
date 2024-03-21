@@ -95,18 +95,6 @@
 	drop sequence qna_seq;
 	create sequence qna_seq start with 1;
 	
-	-- 주소 테이블
-	alter table address
-	drop primary key cascade;
-	create table address (
-		zip_num varchar2(7) not null,
-		sido varchar2(30) null,
-		gugun varchar2(30) null,
-		dong varchar2(100) null,
-		zip_code varchar2(30) not null,
-		bunji varchar2(30) null
-	);
-
 	-- 샘플 데이터 입력
 	insert into worker values('admin', 'admin', '홍관리', '010-777-7777');
 	insert into worker values('pinksung', 'pinksung', '명강사', '010-999-9696');
