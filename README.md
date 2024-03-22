@@ -1,3 +1,6 @@
+# 레거시 프로젝트
+&nbsp; [고도화한 프로젝트 repository](https://github.com/junheiLee/mini_project_03_team8)
+
 ## 기능 목록
 
 ### MainController
