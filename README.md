@@ -1,5 +1,6 @@
 # 레거시 프로젝트
-&nbsp; [고도화한 프로젝트 repository](https://github.com/junheiLee/mini_project_03_team8)
+&nbsp; [첫 번째 고도화 repository](https://github.com/junheiLee/mini_project_03_team8) (Model1 방식 -> Model2 방식)<br>
+&nbsp; [두 번째 고도화 repository](https://github.com/junheiLee/mini_project_03_team8_spring) (Spring framework, MyBatis 도입)
 
 ## 기능 목록
 
